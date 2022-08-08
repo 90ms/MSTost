@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Brand 라이픽 서비스의 브랜드 색상입니다. -->
+    <color name="primary">#1C1E21</color>
+    <color name="partners">#29B59B</color>
+    <color name="error">#FD616D</color>
+    <color name="caption">#4E84FF</color>
+    <color name="white">FFFFFF</color>
+</resources>
