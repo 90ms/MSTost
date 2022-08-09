@@ -8,16 +8,16 @@ Custom View Toast
 #### step1
 ````gradle
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
 ````
 
 #### step2
 ````gradle
 dependencies {
-	        implementation 'com.github.90ms:MS_Toast:Tag'
-	}
+  implementation 'com.github.90ms:MS_Toast:Tag'
+}
 ````
