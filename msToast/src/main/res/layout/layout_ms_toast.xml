@@ -12,15 +12,13 @@
         android:layout_height="match_parent"
         android:background="@android:color/transparent">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.8"
             android:background="@drawable/ms_toast_background"
-            android:fontFamily="@font/lific_regular"
-            android:gravity="center"
-            android:maxWidth="248dp"
+            android:fontFamily="@font/regular"
             android:paddingHorizontal="16dp"
             android:paddingVertical="8dp"
             android:textColor="@color/white"
@@ -31,6 +29,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Test Toast!!!!!!!!!!!!!!!!!!!!!!!!">
 
-        </TextView>
+        </androidx.appcompat.widget.AppCompatTextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

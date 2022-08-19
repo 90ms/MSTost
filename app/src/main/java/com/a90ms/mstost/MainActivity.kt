@@ -1,7 +1,8 @@
 package com.a90ms.mstost
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import com.a90ms.mstoast.msToast
 
 class MainActivity : AppCompatActivity() {
@@ -9,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        msToast("Test123123",2000)
+        findViewById<AppCompatButton>(R.id.btn_test).setOnClickListener {
+            msToast("Test123123", 2000)
+        }
     }
 }

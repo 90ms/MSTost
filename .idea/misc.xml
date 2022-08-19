@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.14059872182980154" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/layout/layout_ms_toast.xml" value="0.23229166666666667" />
+        <entry key="msToast/src/main/res/drawable/ms_styleable_toast.xml" value="0.1885" />
+        <entry key="msToast/src/main/res/drawable/ms_toast_style_background.xml" value="0.1885" />
         <entry key="msToast/src/main/res/layout/layout_ms_toast.xml" value="0.31851851851851853" />
+        <entry key="msToast/src/main/res/layout/layout_ms_toast_style.xml" value="0.335" />
       </map>
     </option>
   </component>

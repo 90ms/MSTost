@@ -3,11 +3,11 @@ package com.a90ms.mstoast
 import android.animation.Animator
 import android.animation.ObjectAnimator
 import android.app.Activity
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.a90ms.mstoast.databinding.LayoutMsToastBinding
@@ -18,7 +18,12 @@ fun Fragment.msToast(messageId: Int, length: Long = MS_LONG) =
 fun Fragment.msToast(message: String, length: Long = MS_LONG) =
     activity?.msToast(message, length)
 
-fun Activity.msToast(message: String, length: Long = MS_LONG) {
+// TODO Dynamic Align, Dynamic Margin, Dynamic Style
+fun Activity.msToast(
+    message: String,
+    length: Long = MS_LONG,
+    align: MsToastAlign = MsToastAlign.TOP
+) {
     val rootView: ViewGroup =
         (findViewById<View>(android.R.id.content) as ViewGroup).getChildAt(0) as ViewGroup
 
@@ -35,8 +40,14 @@ fun Activity.msToast(message: String, length: Long = MS_LONG) {
     toastBinding.root.id = R.id.ms_toast
     toastBinding?.tvToast?.text = message
 
+    // TODO align
+
+    startAnimation(toastBinding.root, length, rootView)
+}
+
+fun startAnimation(root: View, length: Long, viewGroup: ViewGroup) {
     ObjectAnimator.ofFloat(
-        toastBinding.root,
+        root,
         "alpha",
         1f,
         0f
@@ -49,7 +60,7 @@ fun Activity.msToast(message: String, length: Long = MS_LONG) {
                 }
 
                 override fun onAnimationEnd(animation: Animator?) {
-                    rootView.removeView(toastBinding.root)
+                    viewGroup.removeView(root)
                 }
 
                 override fun onAnimationCancel(animation: Animator?) {

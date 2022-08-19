@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MSTost</string>
+    <string name="btn_click_test">클릭!</string>
 </resources>
